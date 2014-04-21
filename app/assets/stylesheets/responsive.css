@@ -1,0 +1,157 @@
+@media only screen and (min-width: 1024px) and (max-width: 1330px) {
+	 
+.wrapper									{ margin:0 auto; min-width:100%;}
+.container									{ width:100%; margin:0 auto;}
+.header										{ width:100%;}
+.headerin									{ width:100%;} 
+.icons										{ padding:45px 0 0 25px;}
+.login										{ margin:38px 25px 0 0;} 
+.main_cont_in								{ width:100%; margin:0 auto;}
+.column_blocks								{ width:96%; margin:0 auto;}
+.column_blocks ul li						{ width:285px; margin:0 60px 0 0;}
+  }
+
+@media only screen and (min-width: 960px) and (max-width: 1023px) {
+	 	 
+.wrapper									{ margin:0 auto; min-width:100%;}
+.container									{ width:100%; margin:0 auto;}
+.header										{ width:100%;}
+.headerin									{ width:100%;}
+.main_cont_in								{ width:100%; margin:0 auto;}
+.column_blocks								{ width:96%; margin:0 auto;}
+.column_blocks ul li						{ width:285px; margin:0 60px 0 0;}
+  }
+
+ /* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	 	 
+.wrapper									{ margin:0 auto; min-width:100%;}
+.container									{ width:100%; margin:0 auto;}
+.header										{ width:100%;}
+.headerin									{ width:100%;}
+.logo										{ padding:40px 0 62px 0; width:288px;}
+.logo a img									{ width:100%;}	 
+.icons										{ padding:35px 0 0 25px;}
+.login										{ margin:32px 25px 0 0; padding:8px 26px 10px 25px;}
+.angle_list a 								{ width:255px; top:166px;}
+.angle_list a img							{ width:25% !important;} 
+.angle_hover a								{ background:url(../images/angle-hover.png) no-repeat right top; background-size:25% !important; font-size:14px; padding:36px 0 0 0;}
+.headerin p									{ width:99%; margin:0 auto; font-size:27px;}
+.learn_more									{ width:265px; padding:14px 0 19px 0;} 
+.get_acc									{ width:265px; padding:17px 0 22px 0; font-size:26px;}
+.learn_more span							{ background:url(../images/learn-more-bg.png) no-repeat 203px 14px; padding:0 0 0 37px; font-size:26px; background-size:6%;}
+.btns										{ padding:0 0 140px 0; width:575px;}
+.main_cont_in								{ width:100%; margin:0 auto;}
+.column_blocks								{ width:100%; margin:0 auto;}
+.column_blocks ul							{ display:block; margin:0 auto; padding:60px 0 0 0;}
+.column_blocks ul li.colla					{ margin:0 auto;}
+.last										{ margin:0 auto !important;}
+.column_blocks ul li 						{ float:none; margin:0 auto; padding:0 0 50px 0;}
+.column_blocks ul li span					{ padding:0 0 15px 0;}
+.mac										{ width:90%; margin:0 auto;}
+.mac a img									{ width:100%;}
+  }
+
+
+ /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+	 	 
+.wrapper									{ margin:0 auto; min-width:100%;}
+.container									{ width:100%; margin:0 auto;}
+.header										{ width:100%;}
+.headerin									{ width:100%;}
+.logo										{ width:250px; padding:35px 0 55px 0;}
+.logo a img									{ width:100%;}							 
+.icons										{ padding:25px 0 0 20px;}
+.login										{ margin:25px 20px 0 0; padding:6px 24px 8px 23px; font-size:19px;}
+.angle_list a 								{ width:184px; top:132px;}
+.angle_list a img							{ width:25% !important;} 
+.angle_hover a								{ background:url(../images/angle-hover.png) no-repeat right top; background-size:25% !important; font-size:14px; padding:25px 0 0 0;
+												text-align:left;}
+
+.headerin p									{ width:99%; margin:0 auto; font-size:23px; padding:0 0 50px 0;}
+.btns										{ width:75%; padding:0 0 100px 0;}
+.learn_more									{ width:200px; padding:8px 0 10px;}
+.learn_more span							{  background:url(../images/learn-more-bg.png) no-repeat 158px 12px; background-size:7%; padding:0 0 0 21px; font-size:22px;}
+.get_acc									{ width:205px; padding:10px 0 14px; font-size:22px;} 
+.main_cont_in								{ width:100%; margin:0 auto;} 
+.column_blocks								{ width:100%; margin:0 auto;}
+.column_blocks ul							{ display:block; margin:0 auto; padding:60px 0 0 0;}
+.column_blocks ul li.colla					{ margin:0 auto;}
+.last										{ margin:0 auto !important;}
+.column_blocks ul li 						{ float:none; margin:0 auto; padding:0 0 50px 0;}
+.column_blocks ul li span					{ padding:0 0 20px 0; font-size:29px;}
+.column_blocks ul li p						{ font-size:29px;}
+.mac										{ width:90%; margin:0 auto;}
+.mac a img									{ width:100%;}
+  }
+
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+.wrapper									{ margin:0 auto; min-width:100%;}
+.container									{ width:100%; margin:0 auto;}
+.header										{ width:100%;}
+.headerin									{ width:100%;}
+.logo										{ width:240px; padding:35px 0 55px 0;}
+.logo a img									{ width:100%;}							 
+.icons										{ padding:25px 0 0 20px;}
+.login										{ margin:25px 20px 0 0; padding:6px 24px 8px 23px; font-size:19px;}
+.angle_list a 								{ display:none;}
+
+
+.headerin p									{ width:99%; margin:0 auto; font-size:21px; padding:0 0 50px 0;}
+.btns										{ width:90%; padding:0 0 100px 0;}
+.learn_more									{ width:200px; padding:8px 0 10px;}
+.learn_more span							{  background:url(../images/learn-more-bg.png) no-repeat 158px 12px; background-size:7%; padding:0 0 0 21px; font-size:22px;}
+.get_acc									{ width:205px; padding:10px 0 14px; font-size:22px;}
+.main_cont_in								{ width:100%; margin:0 auto;}
+.column_blocks								{ width:100%; margin:0 auto;}
+.column_blocks ul							{ display:block; margin:0 auto; padding:45px 0 0 0;}
+.column_blocks ul li.colla					{ margin:0 auto;}
+.last										{ margin:0 auto !important;}
+.column_blocks ul li 						{ float:none; margin:0 auto; padding:0 0 45px 0;}
+.column_blocks ul li span					{ padding:0 0 15px 0; font-size:26px;}
+.column_blocks ul li p						{ font-size:26px;}
+.mac										{ width:86%; margin:0 auto;}
+.mac a img									{ width:100%;}	 
+ }
+
+
+ /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+ @media only screen and (min-width: 320px) and (max-width: 479px) {
+	 
+.wrapper									{ margin:0 auto; min-width:100%;}
+.container									{ width:100%; margin:0 auto;}
+.header										{ width:100%;}
+.headerin									{ width:100%;} 
+.logo										{ width:200px; padding:23px 0 25px 0;}
+.logo a img									{ width:100%;}							 
+.icons										{ padding:12px 0 0 12px;}
+.login										{ margin:12px 12px 0 0; padding:3px 15px 5px 17px; font-size:13px;}
+.icons ul li a.fbook						{ margin:-1px 6px 0 0; background-size:80%;}
+.icons ul li a.fbook:hover					{ background-size:80%;}
+.icons ul li a.twitter						{ margin:2px 5px 0 0;  background-size:80%;}
+.icons ul li a.twitter:hover				{ background-size:80%;}
+.icons ul li a.email						{ background-size:75%;}
+.icons ul li a.email:hover					{ background-size:75%;}
+.angle_list a 								{ display:none;}
+
+
+.headerin p									{ width:99%; margin:0 auto; font-size:16px; padding:0 0 50px 0;}
+.btns										{ width:90%; padding:0 0 40px 0;}
+.learn_more									{ width:127px; padding:5px 0 7px; border:2px solid #DADDE7;}
+.learn_more span							{ background:url(../images/learn-more-bg.png) no-repeat 109px 10px; background-size:7%; padding:0 0 0 8px; font-size:17px;}
+.learn_more:hover							{ border:2px solid #ffffff;}
+.get_acc									{ width:142px; padding:8px 0 9px; font-size:16px;}
+.main_cont_in								{ width:100%; margin:0 auto;}
+.column_blocks								{ width:100%; margin:0 auto;}
+.column_blocks ul							{ display:block; margin:0 auto; padding:22px 0 0 0;}
+.column_blocks ul li.colla					{ margin:0 auto;}
+.last										{ margin:0 auto !important;}
+.column_blocks ul li 						{ float:none; margin:0 auto; width:300px; padding:0 0 40px 0;}
+.column_blocks ul li img					{ padding:0 0 11px 0; width:30%;}
+.column_blocks ul li span					{ font-size:23px; padding:0 0 10px 0;}
+.column_blocks ul li p						{ font-size:22px;}
+.mac										{ width:90%; margin:0 auto;}
+.mac a img									{ width:100%;}
+ }
+
