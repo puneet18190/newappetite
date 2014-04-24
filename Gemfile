@@ -10,6 +10,9 @@ gem 'pg'
 #Use devise for authentication
 gem 'devise', '3.0.0.rc'
 
+#
+gem 'gearman-ruby', '~> 3.0.7'
+
 gem 'debugger'
 
 # Use sqlite3 as the database for Active Record
