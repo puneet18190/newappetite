@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+                            :controllers => {omniauth_callbacks: "omniauth_callbacks"}
+
   root 'welcome#landing'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -28,6 +30,10 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+
+  #Get Email form twitter
+   get '/users/:id/add_email' => 'users#add_email', via: [:get, :patch, :post], :as => :add_user_email
+   patch '/users/:id/add_email' => 'users#add_email'
 
   # Example resource route with sub-resources:
   #   resources :products do

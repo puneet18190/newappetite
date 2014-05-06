@@ -15,6 +15,11 @@ gem 'gearman-ruby', '~> 3.0.7'
 
 gem 'debugger'
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets

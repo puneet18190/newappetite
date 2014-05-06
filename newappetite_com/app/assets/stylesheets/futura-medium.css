@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'FuturaMedium';
+    src: url('futura-medium.eot');
+    src: url('futura-medium.eot') format('embedded-opentype'),
+         url('futura-medium.woff') format('woff'),
+         url('futura-medium.ttf') format('truetype'),
+         url('futura-medium.svg#FuturaMedium') format('svg');
+}
