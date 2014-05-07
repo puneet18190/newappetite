@@ -1,1 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NewAppetite</title>
+<%= csrf_meta_tag %>
+<!-- SET: FAVICON -->
+<%= favicon_link_tag 'favicon.ico' %>
+<!-- END: FAVICON -->
+<!-- SET: STYLESHEET -->
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Montserrat:400,700" %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" %>
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<%= javascript_include_tag 'application' %>
+<%= yield :javascript_includes %>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+		 $(".angle_list a").click(function(){
+
+		$(".angle_hover").slideToggle();
+				});
+
+		});
+
+    </script>
+<!-- END: SCRIPTS -->
+
+<!--[if lt IE 9]>
+ <style>
+<<<<<<< HEAD
+.header		 		{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/laptop-bg.png',sizingMethod='scale'); background:none; }
+=======
+.header		 			{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/laptop-bg.png',sizingMethod='scale'); background:none; }
+>>>>>>> origin/master
+.login					{border-radius:3px; position:relative; behavior: url(PIE.htc); }
+.learn_more				{border-radius:3px; position:relative; behavior: url(PIE.htc); }
+.get_acc				{border-radius:5px; position:relative; behavior: url(PIE.htc); }
+.headerin p				{ text-shadow:0 0 1px #000000; position:relative; behavior: url(PIE.htc); }
+ </style>
+ <![endif]-->
+
+</head>
+
+<body>
 <%= yield %>
+
+
+</body>
+</html>
