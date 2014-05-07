@@ -43,6 +43,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Deployment
+gem 'capistrano'            # For deployment awesome
+gem 'capistrano-rails'      # For deployment awesome
+gem 'capistrano-bundler'    # For deployment awesome
+gem 'unicorn'               # You know you like it.
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
