@@ -13,12 +13,13 @@ gem 'devise', '3.0.0.rc'
 #
 gem 'gearman-ruby', '~> 3.0.7'
 
-gem 'debugger'
-
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+
+# Use sqlite3 as the database for Active Record
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,17 +35,22 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
+gem 'rails_12factor', group: :production
+
+group :development do
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+	gem 'sdoc', '~> 0.4.0'
+	# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
-# Deployment
-gem 'capistrano', '~> 3.1.0'           # For deployment awesome
-gem 'capistrano-rails'      # For deployment awesome
-gem 'capistrano-bundler'    # For deployment awesome
-gem 'unicorn'               # You know you like it.
+  gem 'debugger'
+  # Deployment
+  gem 'capistrano', '~> 3.1.0'           # For deployment awesome
+  gem 'capistrano-rails'      # For deployment awesome
+  gem 'capistrano-bundler'    # For deployment awesome
+  gem 'unicorn'               # You know you like it.
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
