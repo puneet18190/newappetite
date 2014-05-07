@@ -7,9 +7,10 @@ TEMP_EMAIL_REGEX = /change@me.com/
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+    :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :confirmable
 
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
+
 
 def self.find_for_oauth(auth, signed_in_resource = nil)
 
