@@ -1,0 +1,6 @@
+desc 'Setup Web Server'
+task :setup_www do
+  on roles(:www) do 
+    execute :pkgin, '-y install nginx'
+  end
+end

@@ -1,0 +1,14 @@
+desc 'Global setup task'
+task :setup do
+  on roles(:all) do 
+    execute :mkdir, '-p /var/www'
+    execute :pkgin, '-y update'
+    execute :pkgin, '-y in scmgit gcc47'
+    execute :pkgin, '-y in nrsysmond'
+    execute :pkgin, "-y install ruby193 ruby193-rubygems gmake"
+    execute :pkgin, "-y install postgresql92-client"
+    execute "gem install --no-rdoc --no-ri bundler" # Spaces indicate SSHKit not to command-map
+  end
+  invoke :setup_lb
+  invoke :setup_www
+end
