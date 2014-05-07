@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'newappetite-www'
-set :repo_url, 'git@gitlab.com:anuforok/newappetite-new.git'
+set :repo_url, 'git:gitlab.com/anuforok/newappetite-new.git'
 
 # Default branch is :master
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
