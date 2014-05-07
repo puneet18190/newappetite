@@ -44,7 +44,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Deployment
-gem 'capistrano'            # For deployment awesome
+gem 'capistrano', '~> 3.1.0'           # For deployment awesome
 gem 'capistrano-rails'      # For deployment awesome
 gem 'capistrano-bundler'    # For deployment awesome
 gem 'unicorn'               # You know you like it.

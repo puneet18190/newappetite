@@ -4,7 +4,7 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :lb, %w{root@199.116.138.59}
+#role :lb, %w{root@199.116.138.59}
 role :www, %w{root@199.116.138.60}
 
 # Extended Server Syntax
@@ -13,7 +13,7 @@ role :www, %w{root@199.116.138.60}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '199.116.138.59', user: 'root', roles: %w{lb} #, my_property: :my_value
+#server '199.116.138.59', user: 'root', roles: %w{lb} #, my_property: :my_value
 server '199.116.138.60', user: 'root', roles: %w{www} #, my_property: :my_value
 
 ##
