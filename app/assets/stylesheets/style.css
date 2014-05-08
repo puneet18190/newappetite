@@ -68,8 +68,7 @@ body										{color:#b1b1b1; font-family:"Arial", Verdana, Tahoma; font-size:12
 .angle_list a 								{ height:136px; width:352px; position:absolute; top:180px; right:0;}
 .angle_hover								{ position:absolute; right:0; top:0px; display:none;}
 .angle_hover a								{ color:#FFF; font-size:18px; font-family: 'Open Sans', sans-serif; font-weight:700; padding:55px 0 0 0; background:url(../images/angle-hover.png) no-repeat right top;}
-.headerin p									{ color:#ffffff; font-size:32px; font-family: 'Open Sans', sans-serif; font-weight:600; text-align:center; padding:0 0 75px 0;	
-												text-shadow:0 0 1px #000;}
+.headerin p									{ color:#ffffff; font-size:32px; font-family: 'Open Sans', sans-serif; font-weight:600; text-align:center; padding:0 0 75px 0;}
 .btns										{ width:623px; margin:0 auto; padding:0 0 204px 0;}
 .learn_more									{ padding:17px 0 22px 0; border:solid 3px #dadde7; border-radius:4px; width:287px; float:left; background-color:transparent;}
 .learn_more span							{ color:#FFF; font-size:28px; font-family: 'Montserrat', sans-serif; font-weight:400; background:url(../images/learn-more-bg.png) no-repeat 225px 14px; display:block; padding:0 0 0 47px;}
