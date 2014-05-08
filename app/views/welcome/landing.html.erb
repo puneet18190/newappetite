@@ -19,12 +19,12 @@
       </script>
             <!-- Header Starts -->
             <div class="header">
-                    <div class="angle_list">
+                   <!-- <div class="angle_list">
                         <a  href="#"><%= image_tag "angle-bg.png", alt: "Home", align: "right" %></a>
                         <div class="angle_hover">
                             <a  href="#">We’re raising on AngelList!</a>
-                        </div><!--angle_hover-->
-            		</div>
+                        </div><!--angle_hover
+            		</div>-->
             	<div class="headerin">
                     <div class="icons">
                         <ul>
@@ -34,15 +34,15 @@
                         </ul><div class="clear"></div>
                     </div>
                     <div class="right">
-                        <% if user_signed_in? %>
+                       <!-- <% if user_signed_in? %>
                         <a href="#" data-dropdown="drop" class="small primary radius button dropdown"><strong><%= current_user.email %></strong></a><br>
                             <ul id="drop" data-dropdown-content class="f-dropdown">
                                 <li><%=link_to 'Edit profile', edit_user_registration_path %></li>
                                 <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
                             </ul>
                         <% else %>
-                               <!-- <div class="login" href="/users/login" data-fancybox-type="ajax" ><%= link_to 'Login', new_user_session_path%></div>-->
-                        <% end %>
+                               <!-- <div class="login" href="/users/login" data-fancybox-type="ajax" ><%= link_to 'Login', new_user_session_path%></div>
+                        <% end %>-->
                     </div>
 
                     <div class="clear"></div>
@@ -51,7 +51,7 @@
                         <p>We are a points-based music promotion and discovery collective where you can
  build credibility while promoting music you think deserves to be heard. </p>
      					<div class="btns">
-                        	<a class="learn_more" href="#learnMore"><span>Learn More</span></a>
+                        	<a class="learn_more" href="#learnMore"><span>Learn More &nbsp;&nbsp;<i class="fa fa-caret-down"></i></span></a>
                             <a class="get_acc" href="/users/login" id="registerBtn">Get Early Access</a>
                             <div class="clear"></div>
                         </div>

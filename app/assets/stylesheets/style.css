@@ -71,7 +71,7 @@ body										{color:#b1b1b1; font-family:"Arial", Verdana, Tahoma; font-size:12
 .headerin p									{ color:#ffffff; font-size:32px; font-family: 'Open Sans', sans-serif; font-weight:600; text-align:center; padding:0 0 75px 0;	
 												text-shadow:0 0 1px #000;}
 .btns										{ width:623px; margin:0 auto; padding:0 0 204px 0;}
-.learn_more									{ padding:17px 0 22px 0; border:solid 3px #dadde7; border-radius:4px; width:287px; float:left;}
+.learn_more									{ padding:17px 0 22px 0; border:solid 3px #dadde7; border-radius:4px; width:287px; float:left; background-color:transparent;}
 .learn_more span							{ color:#FFF; font-size:28px; font-family: 'Montserrat', sans-serif; font-weight:400; background:url(../images/learn-more-bg.png) no-repeat 225px 14px; display:block; padding:0 0 0 47px;}
 .learn_more:hover							{ border:solid 3px #ffffff;}
 
@@ -79,7 +79,7 @@ body										{color:#b1b1b1; font-family:"Arial", Verdana, Tahoma; font-size:12
 												text-align:center; padding:20px 0 25px 0; float:right; display:block; border-radius:5px;}
 .get_acc:hover								{ color:#FFF; background:#76a7e1; }
 /* ---------------------------------------------------------*/
-
+.emailFormToggle:hover { cursor: pointer; cursor: hand; }
 
 /* ------------------------- NAVIGATION HERE ---------------*/
 #nav										{}
