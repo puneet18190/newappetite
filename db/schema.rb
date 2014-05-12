@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507001715) do
+ActiveRecord::Schema.define(version: 20140512035639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "followers", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "playlist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "followers", ["playlist_id"], name: "index_followers_on_playlist_id", using: :btree
+  add_index "followers", ["user_id"], name: "index_followers_on_user_id", using: :btree
 
   create_table "identities", force: true do |t|
     t.integer  "user_id"
@@ -28,6 +39,37 @@ ActiveRecord::Schema.define(version: 20140507001715) do
   end
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
+
+  create_table "likes", force: true do |t|
+    t.integer "user_id"
+    t.integer "track_id"
+    t.string  "is_liked"
+    t.string  "boolean"
+  end
+
+  add_index "likes", ["track_id"], name: "index_likes_on_track_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
+
+  create_table "playlists", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "playlists", ["user_id"], name: "index_playlists_on_user_id", using: :btree
+
+  create_table "tracks", force: true do |t|
+    t.string   "title"
+    t.string   "artist"
+    t.integer  "playlist_id"
+    t.string   "url"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tracks", ["playlist_id"], name: "index_tracks_on_playlist_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
