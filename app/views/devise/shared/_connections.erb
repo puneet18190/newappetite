@@ -1,0 +1,8 @@
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= link_to image_tag("#{provider.to_s.titleize}ico.png".downcase, :border=>0, :class => 'dock-item'), omniauth_authorize_path(resource_name, provider) %></a>
+
+  <% end -%>
+<% end -%>
+
+<%= image_tag("emailico.png", :border=>0, :class => 'dock-item', :id => 'emailFormToggle', :class=> 'emailFormToggle' )%>

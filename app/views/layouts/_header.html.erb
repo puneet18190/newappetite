@@ -1,0 +1,115 @@
+<%= csrf_meta_tag %>
+<!-- SET: FAVICON -->
+<%= favicon_link_tag 'favicon.ico' %>
+<!-- END: FAVICON -->
+<!-- SET: STYLESHEET -->
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Montserrat:400,700" %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" %>
+<%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<%= javascript_include_tag 'application' %>
+<%= yield :javascript_includes %>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+		 $(".angle_list a").click(function(){
+
+		$(".angle_hover").slideToggle();
+				});
+
+		});
+
+    </script>
+<!-- END: SCRIPTS -->
+
+<!--[if lt IE 9]>
+ <style>
+<<<<<<< HEAD
+.header		 		{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/laptop-bg.png',sizingMethod='scale'); background:none; }
+=======
+.header		 			{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/laptop-bg.png',sizingMethod='scale'); background:none; }
+>>>>>>> origin/master
+.login					{border-radius:3px; position:relative; behavior: url(PIE.htc); }
+.learn_more				{border-radius:3px; position:relative; behavior: url(PIE.htc); }
+.get_acc				{border-radius:5px; position:relative; behavior: url(PIE.htc); }
+.headerin p				{ text-shadow:0 0 1px #000000; position:relative; behavior: url(PIE.htc); }
+ </style>
+ <![endif]-->
+
+</head>
+
+<body>
+	<div class="wrapper">
+	<script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+$(document).ready(function() {
+	/*$(".login").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});*/
+	$("#emailForm").hide();
+	$("#earlyAccessText").show();
+	$("#registerForm").show();
+
+
+	$("#emailFormToggle").click(function(){
+		$("#emailForm").toggle();
+		$("#registerForm").toggle();
+		$("#connections").toggle();
+	})
+
+});
+      </script>
+            <!-- Header Starts -->
+            <div class="header">
+                    <!--<div class="angle_list">
+                        <a  href="#"><%= image_tag "angle-bg.png", alt: "Home", align: "right" %></a>
+                        <div class="angle_hover">
+                            <a  href="#">We’re raising on AngelList!</a>
+                        </div><!--angle_hover
+            		</div>-->
+            	<div class="headerin">
+                    <div class="icons">
+                        <ul>
+                            <li><a class="fbook" href="https://www.facebook.com/newappetite"></a></li>
+                            <li><a class="twitter" href="https://www.twitter.com/newappetite"></a></li>
+                            <li><a  class="email"href="mailto:support@newappetite.com"></a></li>
+                        </ul><div class="clear"></div>
+                    </div>
+                    <div class="right">
+                        <!--<% if user_signed_in? %>
+                        <a href="#" data-dropdown="drop" class="small primary radius button dropdown"><strong><%= current_user.email %></strong></a><br>
+                            <ul id="drop" data-dropdown-content class="f-dropdown">
+                                <li><%=link_to 'Edit profile', edit_user_registration_path %></li>
+                                <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+                            </ul>
+                        <% else %>
+                                <!--<div class="login" href="/users/login" data-fancybox-type="ajax" ><%= link_to 'Login', new_user_session_path%></div>
+                        <% end %>-->
+                    </div>
+
+                    <div class="clear"></div>
+                   	<div class="logo"><a href="/"><%= image_tag "logo.png", alt: "logo" %></a></div>

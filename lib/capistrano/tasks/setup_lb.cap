@@ -1,0 +1,6 @@
+desc 'Setup Load Balancer'
+task :setup_lb do
+  on roles(:lb) do
+    execute :pkgin, '-y install haproxy'
+  end
+end
