@@ -1,0 +1,5 @@
+Rails.application.config.assets.precompile += %w( main.css )
+Rails.application.config.assets.precompile += %w( galleryPagination.js )
+Rails.application.config.assets.precompile += %w( masonry.pkgd.min.js )
+Rails.application.config.assets.precompile += %w( audioplayer.css )
+Rails.application.config.assets.precompile += %w( audioplayer.js )

@@ -1,4 +1,3 @@
-<%= render "layouts/header" %>
 <div id="add-email" class="container">
   ## Add Email
   <%= form_for(@user, :as => 'user', :url => add_user_email_path(@user), :html => { role: 'form'}) do |f| %>
@@ -21,4 +20,3 @@
     </div>
   <% end %>
 </div>
-<%= render "layouts/footer" %>

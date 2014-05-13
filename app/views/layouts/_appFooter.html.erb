@@ -1,0 +1,56 @@
+<div class="right" align="right">
+    <button id="random"><i class="fa fa-random"></i></button>
+    <button id="repeat"><i class="fa fa-repeat"></i></button>
+    <button id="favorite"><i class="fa fa-heart"></i></button>
+    <button id="add"><i class="fa fa-plus"></i></button>
+    <button id="share"></button>
+   <!-- <button id="options" class="btn-menu-state"><i class="fa fa-ellipsis-v"></i></button>-->
+    <button id="options" class="btn-menu-state"><i class="fa fa-ellipsis-v"></i></button></div>
+
+
+<script>
+/*jQuery(document).ready(function ($) {
+var settings_ap = {
+disable_volume: 'off'
+,disable_scrub: 'default'
+,design_skin: 'skin-wave'
+,skinwave_dynamicwaves:'on'
+};
+dzsag_init('#ag1',{
+'transition':'fade'
+,'autoplay' : 'on'
+ ,design_menu_position:'bottom'
+,'settings_ap':settings_ap
+,design_menu_state:'on'
+,design_menu_show_player_state_button: 'off'
+ ,soundcloud_apikey:"8efdf99c13bf826f158503c1ebb9154c"
+  ,php_retriever:"soundcloudretriever.php"
+ });
+alert(arr_menuitems);
+});*/
+
+</script>
+
+<script>jQuery(document).ready(function ($) {
+                        var settings_ap = {
+                            design_skin: "skin-wave"
+                            ,skinwave_dynamicwaves:"off"
+                            ,skinwave_enableSpectrum:"off"
+                            ,settings_backup_type:"full"
+                            ,skinwave_enableReflect:"off"
+                            ,skinwave_comments_enable:"off"
+                            ,soundcloud_apikey:"8efdf99c13bf826f158503c1ebb9154c"
+                            ,php_retriever:"soundcloudretriever.php"
+                          };
+                        dzsag_init("#ag1",{
+                            "transition":"fade"
+                            ,"autoplay" : "on"
+                            ,"autoplayNext" : "on"
+                            ,design_menu_position :"bottom"
+                            ,disable_player_navigation:"off"
+                            ,"settings_ap":settings_ap,
+              cueFirstMedia:"on",
+              design_menu_state:"open",
+              design_menu_show_player_state_button:"off"});});</script>
+</body>
+</html>

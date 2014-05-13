@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Appetite</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+      <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+      <%= stylesheet_link_tag 'main', media: 'all', 'data-turbolinks-track' => true %>
+      <%= stylesheet_link_tag 'audioplayer', media: 'all', 'data-turbolinks-track' => true %>
+      <%= favicon_link_tag 'favicon.ico' %>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <%= javascript_include_tag 'audioplayer' %>
+  <%= javascript_include_tag 'galleryPagination' %>
+  <%= javascript_include_tag 'masonry.pkgd.min' %>
+
+  <script type="text/javascript">
+    jQuery(window).load(function() {
+      //Start Masonry
+      jQuery('#chart').masonry({
+        columnWidth: 0,
+        itemSelector: '.box',
+        gutter: 0,
+        isFitWidth: true
+      });
+    });
+      jQuery('#chart').galleryPagination({
+
+        nop     : 20, // The number of posts per scroll to be loaded
+        offset  : 0, // Initial offset, begins at 0 in this case
+        table   : 'schools',
+        ajaxSource: '/ajax/jamSearch.php',
+        gallery : 0,
+        error   : 'No More Posts!', // When the user reaches the end this is the message that is
+        // displayed. You can change this if you want.
+        delay   : 500, // When you scroll down the posts will load after a delayed amount of time.
+        // This is mainly for usability concerns. You can alter this as you see fit
+        scroll  : true // The main bit, if set to false posts will not load as the user scrolls.
+        // but will still load if the user clicks.
+
+      });;
+
+    </script>
+    <script src="/js/vendor/modernizr.js"></script>
+  <script src="/zoomSounds/source/audioplayer/audioplayer.js" type="text/javascript"></script>
+  <link rel='stylesheet' type="text/css" href="/zoomSounds/source/audioplayer/audioplayer.css"/>
+</head>
+<body><!--[if lt IE 9]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+<header id="top-bar"><a href="/" id="logo"></a>
+    <nav>
+        <button id="navicon"><span class="lines"></span></button>
+        <button class="subnav active">Top</button>
+        <button class="subnav">Recent</button>
+        <button class="subnav">Most Favorited</button>
+        <button class="subnav">All Time</button>
+        <div id="guest">
+            <button id="login">Login</button>
+            <span class="or"></span>
+            <button id="signup">Sign Up</button>
+        </div>
+        <a href="/add"><button id="add-music"><i class="fa fa-plus"></i>Add Music</button></a>
+        <button id="profile"><img src="/images/nick.png"><span class="name">Nick Budidharma</span>
+            <ul class="dropdown">
+                <li class="user-stats"><a href="">1,200 Points</a> <a href="" class="followers">734 Followers</a> <a
+                        href="">259 Following</a></li>
+                <li><a href=""><i class="fa fa-list-alt"></i>My Playlists</a></li>
+                <li><a href=""><i class="fa fa-gear"></i>Account Settings</a></li>
+                <li><a href=""><i class="fa fa-power-off"></i>Logout</a></li>
+                <ul></ul>
+            </ul>
+        </button>
+    </nav>
+</header>
+<aside id="off-canvas">
+    <ul id="nav">
+        <li><a href="#" class="active">Charts</a></li>
+        <li><a href="#">Campaigns</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+    <ul id="genres">
+        <li class="label">Genres
+            <button id="minimize"><i class="fa fa-chevron-down"></i></button>
+        </li>
+        <li>
+            <div class="checkbox"><input name="all" type="checkbox" id="all" checked><label for="all"></label></div>
+All
+        </li>
+        <li>
+            <div class="checkbox"><input name="altIndie" type="checkbox" id="altIndie"><label for="altIndie"></label></div>
+Alt/Indie
+        </li>
+        <li>
+          <div class="checkbox"><input name="country" type="checkbox" id="country"><label for="country"></label></div>
+          Country
+        </li>
+        <li>
+            <div class="checkbox"><input name="electronicDance" type="checkbox" id="electronicDance"><label for="electronicDance"></label></div>
+Electronic/Dance
+        </li>
+        <li>
+            <div class="checkbox"><input name="folk" type="checkbox" id="folk"><label for="folk"></label></div>
+Folk
+        </li>
+        <li>
+            <div class="checkbox"><input name="hipHopRap" type="checkbox" id="hipHopRap"><label for="hipHopRap"></label></div>
+Hip-Hop/Rap
+        </li>
+        <li>
+            <div class="checkbox"><input name="pop" type="checkbox" id="pop"><label for="pop"></label></div>
+Pop
+        </li>
+        <li>
+            <div class="checkbox"><input name="rock" type="checkbox" id="rock"><label for="rock"></label></div>
+Rock
+        </li>
+        <li>
+            <div class="checkbox"><input name="rbSoul" type="checkbox" id="rbSoul"><label for="rbSoul"></label></div>
+R&B/Soul
+</li>
+        <li>
+            <div class="checkbox"><input name="singerSongwriter" type="checkbox" id="singerSongwriter"><label for="singerSongwriter"></label></div>
+Singer-Songwriter
+        </li>
+        <li>
+            <div class="checkbox"><input name="world" type="checkbox" id="world"><label for="world"></label></div>
+World
+        </li>
+    </ul>
+    <ul id="activity">
+        <li class="label">Activity Feed</li>
+    </ul>
+  <script>
+    function buildWall(){
+      $queryString = null;
+      var $queryString = "?new=1";
+      if(jQuery("#altIndie").prop('checked')){
+        $queryString = $queryString.concat("&altIndie=1");
+      }
+      if(jQuery("#country").prop('checked')){
+        $queryString = $queryString.concat("&country=1");
+      }
+      if(jQuery("#electronicDance").prop('checked')){
+        $queryString = $queryString.concat("&electronicDance=1");
+      }
+      if(jQuery("#folk").prop('checked')){
+        $queryString = $queryString.concat("&folk=1");
+      }
+      if(jQuery("#hipHopRap").prop('checked')){
+        $queryString = $queryString.concat("&hipHopRap=1");
+      }
+      if(jQuery("#pop").prop('checked')){
+        $queryString = $queryString.concat("&pop=1");
+      }
+      if(jQuery("#rock").prop('checked')){
+        $queryString = $queryString.concat("&rock=1");
+      }
+      if(jQuery("#rbSoul").prop('checked')){
+        $queryString = $queryString.concat("&rbSoul=1");
+      }
+      if(jQuery("#singerSongwriter").prop('checked')){
+        $queryString = $queryString.concat("&singerSongwriter=1");
+      }
+      if(jQuery("#world").prop('checked')){
+        $queryString = $queryString.concat("&world=1");
+      }
+      if(jQuery("#altIndie").prop('checked')!=true && jQuery("#country").prop('checked')!=true && jQuery("#electronicDance").prop('checked')!=true && jQuery("#folk").prop('checked')!=true && jQuery("#hipHopRap").prop('checked')!=true && jQuery("#pop").prop('checked')!=true && jQuery("#rock").prop('checked')!=true && jQuery("#rbSoul").prop('checked')!=true && jQuery("#singerSongwriter").prop('checked')!=true && jQuery("#world").prop('checked')!=true){
+        jQuery("#all").prop('checked', true);
+      }
+      console.log($queryString);
+      jQuery.get('musicBlocks.php'+$queryString, function( data ) {
+
+        var elements = jQuery("#chart").masonry('getItemElements');
+        jQuery("#chart").masonry( 'remove', elements );
+        jQuery('#chart').masonry();
+
+        // Make jQuery object from HTML string
+        var $moreBlocks = jQuery( data ).filter('div.box');
+        // Append new blocks
+        jQuery('#chart').append( $moreBlocks );
+
+        // Have Masonry position new blocks
+        jQuery('#chart').masonry( 'appended', $moreBlocks );
+        jQuery('#chart').masonry();
+      });
+
+    }
+    $(document).ready(function() {
+      buildWall();
+    });
+    jQuery("#all").click(function() {
+      jQuery("#altIndie").prop('checked', false);
+      jQuery("#country").prop('checked', false);
+      jQuery("#electronicDance").prop('checked', false);
+      jQuery("#folk").prop('checked', false);
+      jQuery("#hipHopRap").prop('checked', false);
+      jQuery("#pop").prop('checked', false);
+      jQuery("#rock").prop('checked', false);
+      jQuery("#rbSoul").prop('checked', false);
+      jQuery("#singerSongwriter").prop('checked', false);
+      jQuery("#world").prop('checked', false);
+      buildWall();
+    });
+    jQuery("#altIndie").click(function() {
+      if(jQuery("#altIndie").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#country").click(function() {
+      if(jQuery("#country").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#electronicDance").click(function() {
+      if(jQuery("#electronicDance").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#folk").click(function() {
+      if(jQuery("#folk").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#hipHopRap").click(function() {
+      if(jQuery("#hipHopRap").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#pop").click(function() {
+      if(jQuery("#pop").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#rock").click(function() {
+      if(jQuery("#rock").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#rbSoul").click(function() {
+      if(jQuery("#rbSoul").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#singerSongwriter").click(function() {
+      if(jQuery("#singerSongwriter").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+    jQuery("#world").click(function() {
+      if(jQuery("#world").prop('checked')){
+        jQuery("#all").prop('checked', false);
+      }
+      buildWall();
+    });
+  </script>
+</aside>

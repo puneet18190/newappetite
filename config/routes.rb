@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
+
+
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
                             :controllers => {omniauth_callbacks: "omniauth_callbacks"}
 
   root 'welcome#landing'
+  get 'main/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -62,4 +65,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  #match ':controller(/:action(/:id))(.:format)'
 end
