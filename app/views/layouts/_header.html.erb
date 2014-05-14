@@ -55,15 +55,18 @@
       });
     });
 $(document).ready(function() {
-	$("#emailForm").hide();
-	$("#earlyAccessText").show();
-	$("#registerForm").show();
-
+    $("#step2").hide();
+    $("#step3").hide();
+    $("#emailForm").hide();
+    $("#registerBtn").click(function(){
+        $("#step1").hide();
+        //alert('testing');
+        $("#step2").show();
+    })
 
 	$("#emailFormToggle").click(function(){
-		$("#emailForm").toggle();
-		$("#registerForm").toggle();
-		$("#connections").toggle();
+        $("#step2").hide();
+        $("#step3").show();
 	})
 
 });
