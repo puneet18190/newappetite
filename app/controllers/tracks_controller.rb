@@ -13,7 +13,7 @@ class TracksController < ApplicationController
 
     respond_to do |format|
       if @track.save
-        format.html { redirect_to user_playlist_tracks_path(current_user.id,params[:playlist_id]), notice: 'Track was successfully created.' }
+        format.html { redirect_to playlist_tracks_path(params[:playlist_id]), notice: 'Track was successfully created.' }
       else
         format.html { render :new }
       end

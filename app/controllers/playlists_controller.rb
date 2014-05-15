@@ -13,7 +13,7 @@ class PlaylistsController < ApplicationController
 
     respond_to do |format|
       if @playlist.save
-        format.html { redirect_to "/users/#{current_user.id}/playlists", notice: 'Playlist was successfully created.' }
+        format.html { redirect_to playlists_path, notice: 'Playlist was successfully created.' }
       else
         format.html { render :new }
       end

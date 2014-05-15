@@ -6,11 +6,11 @@
   <%- @playlists.each do |obj| %>
    <tr>
       <td>
-        <%= link_to obj.name, user_playlist_tracks_path(current_user.id,obj.id)%>
+        <%= link_to obj.name, playlist_tracks_path(obj.id)%>
       </td>
    </tr>
   <%- end %>
   <%- end %>
 </table>
 
-<%= link_to 'New Playlist', new_user_playlist_path(current_user.id,params[:id]) %>
+<%= link_to 'New Playlist', new_playlist_path(params[:id]) %>
