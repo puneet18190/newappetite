@@ -1,0 +1,19 @@
+<%= form_for @track, url: {action: "create", controller: "tracks"} do |f| %>
+<div class="panel-heading">
+  <b>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </b>
+
+  <b>
+    <%= f.label :artist %>
+    <%= f.text_field :artist %>
+  </b>
+
+  <b>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </b>
+    <div class="actions"><%= f.submit 'Save' %></div>
+</div>
+<%- end %>

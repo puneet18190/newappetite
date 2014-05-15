@@ -1,0 +1,16 @@
+<h1>Playlist</h1>
+
+<table>
+   <th>Playlist<th>
+  <%- unless @playlists.nil? %>
+  <%- @playlists.each do |obj| %>
+   <tr>
+      <td>
+        <%= link_to obj.name, user_playlist_tracks_path(current_user.id,obj.id)%>
+      </td>
+   </tr>
+  <%- end %>
+  <%- end %>
+</table>
+
+<%= link_to 'New Playlist', new_user_playlist_path(current_user.id,params[:id]) %>

@@ -1,0 +1,17 @@
+<h1>Playlist <%= @playlist.name %> </h1>
+<table>
+   <th>Tracks<th>
+  <%- unless @tracks.nil? %>
+  <%- @tracks.each do |obj| %>
+   <tr>
+      <td>
+        Title : <%= obj.title%>
+        Artist : <%= obj.artist%>
+        URL : <%= obj.url%>
+      </td>
+   </tr>
+  <%- end %>
+  <%- end %>
+</table>
+
+<%= link_to 'New Track', new_user_playlist_track_path(current_user.id,params[:playlist_id]) %>
