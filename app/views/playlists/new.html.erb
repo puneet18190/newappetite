@@ -1,0 +1,9 @@
+<%= form_for @playlist, url: {action: "create", controller: "playlists"} do |f| %>
+<div class="panel-heading">
+  <b>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </b>
+    <div class="actions"><%= f.submit 'Save' %></div>
+</div>
+<%- end %>

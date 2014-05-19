@@ -8,8 +8,8 @@ gem 'rails', '4.1.0'
 gem 'pg'
 
 #Use devise for authentication
-gem 'devise', '3.0.0.rc'
 
+gem 'devise', '3.2.4'
 #
 gem 'gearman-ruby', '~> 3.0.7'
 
@@ -52,6 +52,7 @@ group :development do
   gem 'unicorn'               # You know you like it.
 end
 
+gem 'activeadmin', github: 'gregbell/active_admin'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
