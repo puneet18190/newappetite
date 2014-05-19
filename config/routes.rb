@@ -13,8 +13,9 @@ Rails.application.routes.draw do
     resources :tracks
   end
 
+  post '/users/update_invite_user_status' => 'users#update_invite_user_status'
   root 'welcome#landing'
-  #get 'main/index'
+  get 'main/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

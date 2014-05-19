@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
-  before_action :set_user, :add_email
+  before_action :set_user, :add_email, :except => :update_invite_user_status
+
+  def update_invite_user_status
+    @user = User.find(params[:user_id])
+    @user.update_attribute('invite_user',params[:status])
+    UserMailer.invite_user(@user).deliver if @user.invite_user == true
+    render :json => {:status => "ok"}.to_json
+  end
 
   def add_email
     if params[:user] && params[:user][:email]

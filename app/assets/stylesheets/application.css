@@ -17,4 +17,11 @@
  *= require responsive
  *= require jquery.fancybox
  */
-
+.alert-notice {
+    background-color: #DFF0D8;
+    border-color: #D6E9C6;
+    color: #468847;
+    font-size: large;
+    font-weight: bold;
+    text-align: center
+}
